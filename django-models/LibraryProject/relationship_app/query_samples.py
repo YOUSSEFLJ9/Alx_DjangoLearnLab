@@ -6,7 +6,7 @@ def sample_queries():
     books_by_author = Book.objects.filter(author=author)
     
     # Many-to-Many: Get all books in a specific library
-    library = Library.objects.get(name="Central Library")
+    library = Library.objects.get(name="library_name")
     books_in_library = library.books.all()
     
     # One-to-One: Get the librarian of a specific library
