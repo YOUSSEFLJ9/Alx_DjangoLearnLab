@@ -6,13 +6,10 @@ from django.views.generic import DetailView
 
 # Create your views here.
 def list_books(request):
-    books = Book.objects.select_related('author').all()
-    response_text = ""
+    books = Book.objects.all()
+    context = {'books': books}
 
-    for book in books:
-        response_text += f"Title: {book.title} , Author: {book.author.name}<br>"
-
-    return render(request, 'relationship_app/list_books.html', {'books': books})
+    return render(request, 'relationship_app/list_books.html', context)
 
 class BookView(DetailView):
     model = Book
