@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Book
 from django.views.generic import DetailView
+from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
