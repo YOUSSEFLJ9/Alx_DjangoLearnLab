@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Author, Book, Library, Librarian, UserProfile
 
-# Register your models here.
+admin.site.register(UserProfile)
+
